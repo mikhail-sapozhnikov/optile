@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Default Suite">
+    <test name="Login and Logout Test">
+        <parameter name="login" value=""/>
+        <parameter name="pass" value=""/>
+        <classes>
+            <class name="net.optile.dropboxtests.LoginTest">
+                <methods>
+                    <include name="dropboxLogin"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Upload and Delete File Test">
+        <parameter name="login" value=""/>
+        <parameter name="pass" value=""/>
+        <parameter name="filePath" value=""/>
+        <parameter name="fileName" value=""/>
+        <classes>
+            <class name="net.optile.dropboxtests.UploadFileTest">
+                <methods>
+                    <include name="uploadFile"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Create Folder Test">
+        <parameter name="login" value=""/>
+        <parameter name="pass" value=""/>
+        <classes>
+            <class name="net.optile.dropboxtests.CreateFolderTest">
+                <methods>
+                    <include name="createFolder"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Change Name Test">
+        <parameter name="login" value=""/>
+        <parameter name="pass" value=""/>
+        <classes>
+            <class name="net.optile.dropboxtests.ChangeNameTest">
+                <methods>
+                    <include name="changeName"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
