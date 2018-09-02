@@ -14,6 +14,7 @@ import org.testng.Assert;
 import java.awt.*;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
+import java.io.File;
 import java.util.Random;
 
 public class BaseTest {
@@ -127,9 +128,9 @@ public class BaseTest {
 
     }
 
-    protected void checkFileUploadedSuccessfully(String fileName) {
+    protected void checkFileUploadedSuccessfully(String filePath) {
 
-        Assert.assertTrue(driver.findElement(By.xpath("//span[text()='" + fileName + "']")).isDisplayed());
+        Assert.assertTrue(driver.findElement(By.xpath("//span[text()='" + getFileNameFromPath(filePath) + "']")).isDisplayed());
 
     }
 
@@ -159,6 +160,13 @@ public class BaseTest {
         clickOn(settingsPage.btnChangeName);
 
         waitUntilVisible(driver.findElement(By.xpath("//span[text()='" + randomName + " " + randomSurname + "']")));
+
+    }
+
+    protected String getFileNameFromPath(String filePath) {
+
+        File f = new File(filePath);
+        return f.getName();
 
     }
 

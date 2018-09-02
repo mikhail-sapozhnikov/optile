@@ -13,16 +13,16 @@ public class UploadFileTest extends BaseTest {
         initDriver();
     }
 
-    @Parameters({"login", "pass", "filePath", "fileName"})
+    @Parameters({"login", "pass", "filePath"})
     @Test
-    public void uploadFile(String login, String pass, String filePath, String fileName) {
+    public void uploadFile(String login, String pass, String filePath) {
 
         loginToDropbox(login, pass);
 
         clickOn(mainPage.menuBtnFiles);
         clickOn(filesPage.btnUpload);
         uploadFileWithPath(filePath);
-        checkFileUploadedSuccessfully(fileName);
+        checkFileUploadedSuccessfully(filePath);
         clickOn(filesPage.btnDelete);
         clickOn(filesPage.btnDeleteConfirmation);
 

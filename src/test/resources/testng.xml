@@ -16,7 +16,6 @@
         <parameter name="login" value=""/>
         <parameter name="pass" value=""/>
         <parameter name="filePath" value=""/>
-        <parameter name="fileName" value=""/>
         <classes>
             <class name="net.optile.dropboxtests.UploadFileTest">
                 <methods>
