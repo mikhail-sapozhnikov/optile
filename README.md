@@ -7,6 +7,8 @@ Test suite contains 5 cases:
 4) Create Folder
 5) Change Name
 
+Note: Upload File functionality was tested only on Windows OS and should fail on other OS, please tell me if it is needed for another OS
+
 In order to run tests please enter needed parameter values in the testng.xml file, which can be found in ./src/test/resources folder:
 1) "login" and "pass" - Dropbox login credentials
 2) "filePath" - absolute path to a file which should be uploaded to Dropbox, for example: "C:\TestFolder\pic01.png"
@@ -29,6 +31,3 @@ chmod +x chromedriver_mac64
 ```bash
 mvn clean test
 ```
-
-
-Note: Upload File functionality was tested only on Windows OS and should fail on other OS, please tell me if it is needed for another OS
