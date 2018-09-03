@@ -12,7 +12,6 @@ Note: Upload File functionality was tested only on Windows OS and should fail on
 In order to run tests please enter needed parameter values in the testng.xml file, which can be found in ./src/test/resources folder:
 1) "login" and "pass" - Dropbox login credentials
 2) "filePath" - absolute path to a file which should be uploaded to Dropbox, for example: "C:\TestFolder\pic01.png"
-3) "fileName" - name of the file, for example: "pic01.png"
 
 ### Steps to run tests:
 
